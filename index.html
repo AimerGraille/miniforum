@@ -33,6 +33,56 @@
                 </article>
 
             </section>
+
+            <section>
+                <h2>Nouveau Sujet</h2>
+                <form action="/topics" method="post">
+                    <fieldset>
+                        <legend>Votre message</legend>
+                        <p>
+                            <label for="pseudo">Pseudo</label>
+                            <input type="text" id="pseudo" name="pseudo" placeholder="AimerGraille" required>
+                        </p>
+
+                        <p>
+                            <label for="titre">Titre du sujet</label>
+                            <input type="text" id="titre" name="titre" max="80" required>
+                        </p>
+
+                        <p>
+                            <label for="message">Contenu</label>
+                            <textarea id="message" name="message" rows="6"></textarea>
+                        </p>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Options de publication</legend>
+                        <p>
+                            <label for="categorie">Catégorie</label>
+                            <select id="categorie" name="categorie">
+                                <option value="general">Général</option>
+                                <option value="aide">Aide</option>
+                                <option value="projet">Projets</option>
+                            </select>
+                        </p>
+
+                        <p>
+                            <label for="visibilite">Visibilité</label>
+                            <p>
+                                <input type="radio" id="public" name="visibilite" value="public" checked>
+                                <label for="visibilite">Publique</label>
+                            </p>
+
+                            <p>
+                                <input type="radio" id="prive" name="visibilite" value="prive">
+                                <label for="visibilite">Privée</label>
+                            </p>
+                        </p>
+                    </fieldset>
+
+                    <button type="submit">Publier</button>
+                </form>
+            </section>
         </main>
 
         <footer>
