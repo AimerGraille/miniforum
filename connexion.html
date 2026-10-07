@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang ="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name =" viewport " content =" width = device -width , initial - scale =1.0 ">
+        <title>MiniForum - Bienvenue sur le MiniForum</title>
+    </head>
+    <body>
+        <header>
+            <h1>MiniForum</h1>
+           <nav>
+                <a href="inscription.html">Inscription</a>
+                <a href="connexion.html">Connexion</a>
+            </nav>
+        </header>
+
+        <main>
+            <h2>Connexion</h2>
+         <form action="/connexion" method="post">
+            <legend>Vos Identifiants</legend>
+            <fieldset>
+
+                <p>
+                    <label>Pseudo ou adresse e-mail</label>
+                    <input type="text" id="identifiant" name="identifiant" required>
+                </p>
+
+                <p>
+                    <label for="password">Mot de passe</label>
+                    <input type="text" id="password" name="password" required>
+                </p>
+
+                <p>
+                    <input type="checkbox" id="connecte" name="connecte">
+                    <label>Rester connecté sur cet appareil</label>
+                </p>
+
+            </fieldset>
+
+            <button type="submit">Se connecter</button>
+            <a href="inscription.html">Pas encore de compte ? S'inscrire</a>
+         </form>
+        </main>
+
+        <footer>
+            <p>Nom du Projet</p>
+            <p>Classe Passerelle</p>
+        </footer>
+    </body>
+</html>

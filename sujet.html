@@ -8,6 +8,10 @@
     <body>
         <header>
             <h1>MiniForum</h1>
+            <nav>
+                <a href="inscription.html">Inscription</a>
+                <a href="connexion.html">Connexion</a>
+            </nav>
         </header>
 
         <main>
@@ -40,6 +44,22 @@
                 </article>
 
             </section>
+
+            <form>
+                <h3> Répondre à ce sujet</h3>
+                <fieldset>
+                    <legend>Votre Réponse</legend>
+                    <p>
+                        <label for="pseudo">Pseudo</label>
+                        <input type="text" id="pseudo" name="pseudo" required>
+                    </p>
+                    <p>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </p>
+                </fieldset>
+                <button type="submit">Envoyer la réponse</button>
+            </form>
         </main>
 
         <footer>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang ="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name =" viewport " content =" width = device -width , initial - scale =1.0 ">
+        <title>MiniForum - Bienvenue sur le MiniForum</title>
+    </head>
+    <body>
+        <header>
+            <h1>MiniForum</h1>
+            <nav>
+                <a href="inscription.html">Inscription</a>
+                <a href="connexion.html">Connexion</a>
+            </nav>
+        </header>
+
+        <main>
+           <h2>Créer un compte</h2>
+           <form action="/inscription" method="post">
+            <fieldset>
+                <legend>Identifiants</legend>
+                <p>
+                    <label for="pseudo">Pseudo</label>
+                    <input type="text" id="pseudo" name="pseudo" pattern="[A-Za-z0-9]{3,15}" title="3 à 15 lettres ou chiffres" required>
+                </p>
+
+                <p>
+                    <label for="email">Adresse e-mail</label>
+                    <input type="email" id="email" name="email" required>
+                </p>
+                
+                <p>
+                    <label for="motdepasse">Mot de passe</label>
+                    <input type="password" id="motdepasse" name="motdepasse" minlength="8" required>
+                </p>
+
+                <p>
+                    <label for="naissance">Date de naissance</label>
+                    <input type="date" id="naissance" name="naissance">
+                </p>
+                
+            </fieldset>
+            <fieldset>
+                <legend>Préférences</legend>
+                <p>
+                    <input type="checkbox" id="newsletter" name="newsletter" value="newsletter" >
+                    <label for="newsletter">Lettre d'informations</label>
+                </p>
+
+                <p>
+                    <input type="checkbox" id="cgu" name="cgu" required>
+                    <label for="cgu">Acceptation des conditions</label>
+                </p>
+
+            </fieldset>
+            <p>
+                <button type="submit">Créer mon compte</button>
+            </p>
+
+            <p>
+                <a href="./connexion.html">Connexion</a>
+            </p>
+
+           </form> 
+        </main>
+
+        <footer>
+            <p>Nom du Projet</p>
+            <p>Classe Passerelle</p>
+        </footer>
+    </body>
+</html>

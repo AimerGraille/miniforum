@@ -2,12 +2,16 @@
 <html lang ="fr">
     <head>
         <meta charset="UTF-8">
-        <meta name =" viewport " content =" width = device -width , initial - scale =1.0 ">
+        <meta name ="viewport" content =" width=device-width , initial-scale =1.0 ">
         <title>MiniForum - Accueil</title>
     </head>
     <body>
         <header>
             <h1>MiniForum</h1>
+            <nav>
+                <a href="inscription.html">Inscription</a>
+                <a href="connexion.html">Connexion</a>
+            </nav>
         </header>
 
         <main>
@@ -41,17 +45,17 @@
                         <legend>Votre message</legend>
                         <p>
                             <label for="pseudo">Pseudo</label>
-                            <input type="text" id="pseudo" name="pseudo" placeholder="AimerGraille" required>
+                            <input type="text" id="pseudo" name="pseudo" pattern="[A-Za-z0-9]{3,15}" placeholder="AimerGraille" title ="3 à 15 caractères : lettres et chiffres uniquement " required>
                         </p>
 
                         <p>
                             <label for="titre">Titre du sujet</label>
-                            <input type="text" id="titre" name="titre" max="80" required>
+                            <input type="text" id="titre" name="titre" maxlength="80" required>
                         </p>
 
                         <p>
                             <label for="message">Contenu</label>
-                            <textarea id="message" name="message" rows="6"></textarea>
+                            <textarea id="message" name="message" rows="6" maxlength="500" required></textarea>
                         </p>
                     </fieldset>
 
@@ -66,18 +70,19 @@
                             </select>
                         </p>
 
+                        <label for="visibilite">Visibilité</label>
                         <p>
-                            <label for="visibilite">Visibilité</label>
-                            <p>
-                                <input type="radio" id="public" name="visibilite" value="public" checked>
-                                <label for="visibilite">Publique</label>
-                            </p>
-
-                            <p>
-                                <input type="radio" id="prive" name="visibilite" value="prive">
-                                <label for="visibilite">Privée</label>
-                            </p>
+                            <input type="radio" id="public" name="visibilite" value="public" checked>
+                            <label for="public">Publique</label>
+            
                         </p>
+
+                       <p>
+                            <input type="radio" id="prive" name="visibilite" value="prive">
+                            <label for="prive">Privée</label>
+
+                        </p>
+                    
                     </fieldset>
 
                     <button type="submit">Publier</button>
