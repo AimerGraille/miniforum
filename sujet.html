@@ -8,22 +8,18 @@
 
     </head>
     <body>
-        <header>
+        <header class="entete">
             <h1>MiniForum</h1>
             <nav>
+                <a href="index.html">Accueil</a>
+                <a href="#sujets">Sujets</a>
                 <a href="inscription.html">Inscription</a>
                 <a href="connexion.html">Connexion</a>
             </nav>
         </header>
 
         <main>
-            <nav>
-                <ul>
-                    <li><a href="./index.html">Accueil</a></li>
-                </ul>
-            </nav>   
-            
-            <h2>Sujet 1</h2>
+             <h2>Sujet 1</h2>
 
             <section id="Reponses1">
                 <h3>Réponses</h3>
@@ -57,14 +53,14 @@
                     </p>
                     <p>
                         <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="6" required></textarea>
+                        <textarea id="message" class="carte-message" name="message" rows="6" required></textarea>
                     </p>
                 </fieldset>
-                <button type="submit">Envoyer la réponse</button>
+                <button type="submit" class="bouton" >Envoyer la réponse</button>
             </form>
         </main>
 
-        <footer>
+        <footer class="pied">
             <p>Nom du Projet</p>
             <p>Classe Passerelle</p>
         </footer>
