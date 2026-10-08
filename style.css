@@ -1,8 +1,30 @@
-button{
-    background-color: #1D4E89;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+*{ box-sizing: border-box; }
+/*
+palette de couleur:
+--> vert clair:#82b74b
+--> vert foncé: #405d27
+--> beige: #c1946a
+--> gris foncé: #3e4444
+*/
+ 
+/* === 1. Reglages generaux ============================ */
+body
+{
+    margin: 0;
+    font-family: Didot, serif;
+    size: 16px;
+    line-height: 1.6;
+    color: #3e4444;
+    background-color: #82b74b;
 }
+
+main{
+    width: 900px;
+    margin: 0 auto;
+    padding: 0;
+}
+/* === 2. En-tete et navigation ======================== */
+/* === 3. Contenu principal ============================ */
+/* === 4. Cartes de sujet ============================== */
+/* === 5. Formulaires ================================== */
+/* === 6. Pied de page ================================= */
