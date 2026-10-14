@@ -3,7 +3,7 @@
 palette de couleur:
 --> vert clair:#82b74b
 --> vert foncé: #405d27
---> beige: #c1946a
+--> beige: #c1946a  #ffd1a5
 --> gris foncé: #3e4444
 --> bordeaux: #7B1B38
 */
@@ -32,6 +32,7 @@ main{
     align-items: center;
     border: 3px solid #405d27;
     border-radius: 8px;
+    padding: 5px 30px;
 }
 
 nav ul { 
@@ -47,17 +48,60 @@ nav ul {
     text-decoration: none;
 }
 
-.liste-sujets .carte-sujet a{
+.liste-sujets { 
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.carte-sujet {
+    padding: 16px;
+    border: 3px solid #405d27;
+    border-radius: 8px;
+    background-color: #ffd1a5;
+    width: none;
+}
+
+.carte-sujet a{
     color: #7B1B38;
     text-decoration: none;
 }
+
+.carte-sujet strong{
+    color: #405d27d3;
+}
+
+.carte-message {
+    padding: 16px;
+    border: 3px solid #405d27;
+    border-radius: 8px;
+    background-color: #ffd1a5;
+    width: none;
+}
+
+.carte-message p textarea{
+    padding: 16px;
+    border: 3px solid #405d27;
+    border-radius: 8px;
+    width: none;
+}
+
+.carte-message p input{
+    padding: 16px;
+    border: 3px solid #405d27;
+    border-radius: 8px;
+    width: none;
+}
+
 
 
 /* === 3. Contenu principal ============================ */
 /* === 4. Cartes de sujet ============================== */
 /* === 5. Formulaires ================================== */
 /* === 6. Pied de page ================================= */
-
 .pied {
     background-color: #405d271f;
     text-align: center;
