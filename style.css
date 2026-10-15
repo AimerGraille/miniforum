@@ -27,6 +27,11 @@ main{
     margin-right: 30px;
     padding: 0;
 }
+
+/* label { 
+    display: block; 
+    margin-bottom: 4px; 
+} */
 /* === 2. En-tete et navigation ======================== */
 .entete{
     align-items: center;
@@ -86,7 +91,7 @@ nav ul {
 
 /* === 5. Formulaires ================================== */
 
-.carte-message {
+.option-publication, .carte-message {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -104,10 +109,9 @@ nav ul {
 
 .carte-message p textarea{
     background-color: #ffeeaf;
-    padding: 16px;
+    
     border: 3px solid #405d27;
     border-radius: 5px;
-    width: none;
     flex-grow: 1;
     resize:vertical;
 }
@@ -127,6 +131,12 @@ nav ul {
     border-radius: 5px;
     width: none;
 }
+
+.carte-message label {
+    display: block;
+}
+
+
 
 /* === 6. Pied de page ================================= */
 .pied {
