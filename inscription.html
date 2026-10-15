@@ -21,8 +21,8 @@
         <main>
            <h2>Créer un compte</h2>
            <form action="/inscription" method="post">
-            <fieldset>
-                <legend>Identifiants</legend>
+            <fieldset class="carte-message">
+                <h4>Identifiants</h4>
                 <p>
                     <label for="pseudo">Pseudo</label>
                     <input type="text" id="pseudo" name="pseudo" pattern="[A-Za-z0-9]{3,15}" title="3 à 15 lettres ou chiffres" required>
@@ -44,8 +44,8 @@
                 </p>
                 
             </fieldset>
-            <fieldset>
-                <legend>Préférences</legend>
+            <fieldset class="carte-message">
+                <h4>Préférences</h4>
                 <p>
                     <input type="checkbox" id="newsletter" name="newsletter" value="newsletter" >
                     <label for="newsletter">Lettre d'informations</label>

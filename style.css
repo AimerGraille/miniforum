@@ -3,16 +3,17 @@
 palette de couleur:
 --> vert clair:#82b74b
 --> vert foncé: #405d27
---> beige: #c1946a  #ffd1a5
+--> beige: #c1946a  #ffd1a5 #ffeeaf
 --> gris foncé: #3e4444
 --> bordeaux: #7B1B38
 */
  
 /* === 1. Reglages generaux ============================ */
+
 body
 {
     margin: 0;
-    font-family: Didot, sans-serif;
+    font-family: 'Luckiest Guy', cursive, sans-serif;
     size: 16px;
     line-height: 1.6;
     color: #3e4444;
@@ -20,18 +21,21 @@ body
 }
 
 main{
-    width: 900px;
-    margin: 0 auto;
+    /* width: 90px; */
+    /* margin: 0 auto; */
+    margin-left: 30px;
+    margin-right: 30px;
     padding: 0;
 }
 /* === 2. En-tete et navigation ======================== */
 .entete{
-
+    align-items: center;
+    background-color: #7B1B38;
+    border: 0px solid #405d27;
+    border-radius: 0px;
+    color: #82b74b;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    border: 3px solid #405d27;
-    border-radius: 8px;
     padding: 5px 30px;
 }
 
@@ -44,23 +48,29 @@ nav ul {
 }
 
 .entete nav a{
-    color: #7B1B38;
+    padding-right: 10px;
+    color: #82b74b;
     text-decoration: none;
 }
 
 .liste-sujets { 
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 5px;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
+/* === 3. Contenu principal ============================ */
+
+/* === 4. Cartes de sujet ============================== */
+
 .carte-sujet {
+    margin-top: 5px;
     padding: 16px;
-    border: 3px solid #405d27;
-    border-radius: 8px;
+    border: 3px solid #7B1B38;
+    border-radius: 5px;
     background-color: #ffd1a5;
     width: none;
 }
@@ -74,35 +84,56 @@ nav ul {
     color: #405d27d3;
 }
 
+/* === 5. Formulaires ================================== */
+
 .carte-message {
-    padding: 16px;
-    border: 3px solid #405d27;
-    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: flex-start;
+    flex-wrap: wrap;
+
+    margin-top: 5px;
+    padding: 0px 16px;
+    border: 3px solid #7B1B38;
+    border-radius: 5px;
     background-color: #ffd1a5;
     width: none;
 }
 
 .carte-message p textarea{
+    background-color: #ffeeaf;
     padding: 16px;
     border: 3px solid #405d27;
-    border-radius: 8px;
+    border-radius: 5px;
     width: none;
+    flex-grow: 1;
+    resize:vertical;
 }
 
 .carte-message p input{
-    padding: 16px;
+    background-color: #ffeeaf;
+    padding: 5px;
     border: 3px solid #405d27;
-    border-radius: 8px;
+    border-radius: 5px;
     width: none;
 }
 
+.carte-message select{
+    background-color: #ffeeaf;
+    padding: 5px;
+    border: 3px solid #405d27;
+    border-radius: 5px;
+    width: none;
+}
 
-
-/* === 3. Contenu principal ============================ */
-/* === 4. Cartes de sujet ============================== */
-/* === 5. Formulaires ================================== */
 /* === 6. Pied de page ================================= */
 .pied {
-    background-color: #405d271f;
+    color: #82b74b;
+    margin-top: 100px;
+    padding-top: 10px;
+    padding-bottom: 100px;
+    background-color: #7B1B38;
     text-align: center;
 }

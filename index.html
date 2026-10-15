@@ -44,8 +44,8 @@
             <section>
                 <h2>Nouveau Sujet</h2>
                 <form action="/topics" method="post">
-                    <fieldset>
-                        <legend>Votre message</legend>
+                    <fieldset class="carte-message">
+                        <h4>Votre message</h4>
                         <p>
                             <label for="pseudo">Pseudo</label>
                             <input type="text" id="pseudo" name="pseudo" pattern="[A-Za-z0-9]{3,15}" placeholder="AimerGraille" title ="3 à 15 caractères : lettres et chiffres uniquement " required>
@@ -62,8 +62,8 @@
                         </p>
                     </fieldset>
 
-                    <fieldset>
-                        <legend>Options de publication</legend>
+                    <fieldset class="carte-message">
+                        <h4>Options de publication</h4>
                         <p>
                             <label for="categorie">Catégorie</label>
                             <select id="categorie" name="categorie">
