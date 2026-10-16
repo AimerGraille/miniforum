@@ -27,6 +27,9 @@ main{
     padding: 0;
 }
 
+h2 {
+    margin-top: 96px;
+}
 /* label { 
     display: block; 
     margin-bottom: 4px; 
@@ -147,6 +150,28 @@ textarea{
     width: auto;               /* Reprend sa taille de case normale */
     margin: 0;                 /* Supprime les marges indésirables */
     cursor: pointer;           /* Ajoute le curseur "main" au survol */
+}
+
+form{
+   display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: flex-start;
+
+    margin-top: 5px;
+    padding: 15px;
+    border: 0px solid #7B1B38;
+    border-radius: 8px;
+    background-color: #405d27d3; 
+}
+
+.bouton{
+    width: 100%;
+    margin-top: 10px;
+    background-color: #ffeeaf;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 
