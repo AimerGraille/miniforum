@@ -60,6 +60,24 @@ nav ul {
     text-decoration: none;
 }
 
+.entete nav a:hover{
+    padding-right: 10px;
+    color: #405d27;
+    text-decoration: none;
+}
+
+.entete nav a:focus-visible{
+    padding-right: 10px;
+    color: #405d27;
+    text-decoration: none;
+    outline: 3px solid #405d27;
+    border-radius: 3px;
+    outline-offset: 2px;    
+}
+
+
+/* === 3. Contenu principal ============================ */
+
 .liste-sujets { 
     display: flex;
     flex-direction: column;
@@ -69,7 +87,6 @@ nav ul {
     padding: 0;
 }
 
-/* === 3. Contenu principal ============================ */
 
 /* === 4. Cartes de sujet ============================== */
 
@@ -83,6 +100,11 @@ nav ul {
 
 .carte-sujet a{
     color: #7B1B38;
+    text-decoration: none;
+}
+
+.carte-sujet a:hover{
+    color: #82b74b;
     text-decoration: none;
 }
 
@@ -119,6 +141,12 @@ textarea{
     resize:none;
 }
 
+textarea:focus-visible{ 
+    outline: 3px solid #7B1B38;
+    border-radius: 5px;
+    outline-offset: 2px;
+}
+
 .carte-message p input{
     width: 100%;
     background-color: #ffeeaf;
@@ -127,11 +155,22 @@ textarea{
     border-radius: 5px;
 }
 
-.option-publication p select{
+.carte-message p input:focus-visible{ 
+    outline: 3px solid #7B1B38;
+    border-radius: 5px;
+    outline-offset: 2px;
+}
+
+.option-publication select{
     background-color: #ffeeaf;
     padding: 5px;
     border: 3px solid #405d27;
     border-radius: 5px;
+}
+
+.option-publication select:focus-visible{ 
+    outline: 3px solid #7B1B38;
+    outline-offset: 2px;
 }
 
 .carte-message label {
@@ -167,11 +206,51 @@ form{
 }
 
 .bouton{
+    border: none;
     width: 100%;
     margin-top: 10px;
     background-color: #ffeeaf;
     padding: 10px;
     border-radius: 5px;
+}
+
+.bouton:focus-visible{ 
+    color: #82b74b;
+    background-color: #7B1B38;
+    outline: 0px;
+    outline-offset: 2px;
+}
+
+.bouton:hover{
+    color: #82b74b;
+    background-color: #7B1B38;
+}
+
+
+
+.link{
+    color: #82b74b;
+    text-decoration: none;
+}
+
+.link:hover{
+    color: #7B1B38;
+    text-decoration: underline;
+}
+
+.link:focus-visible{
+    outline: 3px solid #7B1B38;
+    border-radius: 5px;
+    outline-offset: 2px;
+}
+
+section form input[type="radio"]{
+    accent-color: #405d27;
+}
+
+section form input[type="radio"]:focus-visible{ 
+    outline: 3px solid #7B1B38;
+    outline-offset: 2px;
 }
 
 
