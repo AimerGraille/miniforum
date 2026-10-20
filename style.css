@@ -99,11 +99,24 @@ nav ul {
 }
 
 .carte-sujet a{
-    color: #7B1B38;
+    color:#7B1B38;
     text-decoration: none;
 }
 
-.carte-sujet a:hover{
+.carte-sujet a:focus-visible{
+    outline: 3px solid #7B1B38;
+    border-radius: 5px;
+    outline-offset: 2px;
+}
+
+.carte-sujet:hover{
+    border: 3px solid #7B1B38;
+    background-color: #7B1B38;
+    color:#82b74b;
+}
+
+.carte-sujet:hover strong,
+.carte-sujet:hover a{
     color: #82b74b;
     text-decoration: none;
 }
@@ -111,6 +124,7 @@ nav ul {
 .carte-sujet strong{
     color: #405d27d3;
 }
+
 
 /* === 5. Formulaires ================================== */
 

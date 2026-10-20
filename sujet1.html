@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang ="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name =" viewport " content =" width = device -width , initial - scale =1.0 ">
+        <title>MiniForum - Bienvenue sur le MiniForum</title>
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+        <header class="entete">
+            <h1>MiniForum</h1>
+            <nav>
+                <a href="index.html">Accueil</a>
+                <a href="index.html#sujets">Sujets</a>
+                <a href="inscription.html">Inscription</a>
+                <a href="connexion.html">Connexion</a>
+            </nav>
+        </header>
+
+        <main>
+             <h2>Sujet 1</h2>
+
+            <section id="Reponses1">
+                <h3>Réponses</h3>
+                <article class="carte-message">
+                    <h3>Article 1</h3>
+                    <p><strong>Auteur 1</strong> <time datetime="2026-09-24">24 septembre 2026</time></p>
+                    <p>texte 1</p>
+                </article>
+
+                <article class="carte-message">
+                    <h3>Article 2</h3>
+                    <p><strong>Auteur 2</strong> <time datetime="2026-09-24">24 septembre 2026</time></p>
+                    <p>texte 2</p>
+                </article>
+
+                <article class="carte-message">
+                    <h3>Article 3</h3>
+                    <p><strong>Auteur 3</strong> <time datetime="2026-09-24">24 septembre 2026</time></p>
+                    <p>texte 3</p>
+                </article>
+
+            </section>
+
+            <h3> Répondre à ce sujet</h3>
+            <form>
+                <fieldset class="carte-message">
+                   <h4 class="reponses">Votre Réponse</h4>
+                    <p>
+                        <label for="pseudo">Pseudo</label>
+                        <input type="text" id="pseudo" name="pseudo" required>
+                    </p>
+                    <p>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </p>
+                </fieldset>
+                <button type="submit" class="bouton" >Envoyer la réponse</button>
+            </form>
+        </main>
+
+        <footer class="pied">
+            <p>Nom du Projet</p>
+            <p>Classe Passerelle</p>
+        </footer>
+    </body>
+</html>
