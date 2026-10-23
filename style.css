@@ -9,26 +9,44 @@ palette de couleur:
 */
  
 /* === 1. Reglages generaux ============================ */
+:root{
+
+    --couleur-texte: #3e4444;
+    --couleur-form: #405d27;
+    --couleur-fond: #82b74b;
+    --couleur-carte:#ffd1a5;
+    --couleur-bordure-lien: #7B1B38;
+    --couleur-bulle:#ffeeaf;
+
+    --pas-espace: 0rem;
+    --espace-tres-petit: 0.25rem; 
+    --espace-petit: 0.5rem;
+    --espace-moyen: 1rem; 
+    --espace-grand: 2rem;
+    --espace-tres-grand: 6rem;
+
+    --rayon: 0.5rem;
+}
 
 body
 {
-    margin: 0;
+    margin: var(--pas-espace);
     font-family: 'Luckiest Guy', cursive, sans-serif;
     font-size: 16px;
     line-height: 1.6;
-    color: #3e4444;
-    background-color: #82b74b;
+    color: var(--couleur-texte);
+    background-color: var(--couleur-fond);
 }
 
 main{
     width: 90%;
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 0;
+    margin: var(--pas-espace) auto;
+    padding: var(--pas-espace);
 }
 
 h2 {
-    margin-top: 96px;
+    margin-top: var(--espace-tres-grand);
 }
 /* label { 
     display: block; 
@@ -37,41 +55,40 @@ h2 {
 /* === 2. En-tete et navigation ======================== */
 .entete{
     align-items: center;
-    background-color: #7B1B38;
-    border: 0px solid #405d27;
-    border-radius: 0px;
-    color: #82b74b;
+    background-color: var(--couleur-bordure-lien);
+    border: 0px solid var(--couleur-form);
+    color: var(--couleur-fond);
     display: flex;
     justify-content: space-between;
-    padding: 5px 30px;
+    padding: var(--espace-tres-petit) var(--espace-grand);
 }
 
 nav ul { 
     display: flex;
-    gap: 20px;
+    gap: var(--espace-moyen);
     list-style: none; 
-    margin: 0; 
-    padding: 0; 
+    margin: var(--pas-espace); 
+    padding: var(--pas-espace); 
 }
 
 .entete nav a{
-    padding-right: 10px;
-    color: #82b74b;
+    padding-right: var(--espace-petit);
+    color: var(--couleur-fond);
     text-decoration: none;
 }
 
 .entete nav a:hover{
-    padding-right: 10px;
-    color: #405d27;
+    padding-right: var(--espace-petit);
+    color: var(--couleur-form);
     text-decoration: none;
 }
 
 .entete nav a:focus-visible{
-    padding-right: 10px;
-    color: #405d27;
+    padding-right: var(--espace-petit);
+    color: var(--couleur-form);
     text-decoration: none;
-    outline: 3px solid #405d27;
-    border-radius: 3px;
+    outline: 3px solid var(--couleur-form);
+    border-radius: var(--rayon);
     outline-offset: 2px;    
 }
 
@@ -81,48 +98,48 @@ nav ul {
 .liste-sujets { 
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: var(--espace-tres-petit);
     list-style: none;
-    margin: 0;
-    padding: 0;
+    margin: var(--pas-espace);
+    padding: var(--pas-espace);
 }
 
 
 /* === 4. Cartes de sujet ============================== */
 
 .carte-sujet {
-    margin-top: 5px;
-    padding: 16px;
-    border: 3px solid #7B1B38;
-    border-radius: 5px;
-    background-color: #ffd1a5;
+    margin-top: var(--espace-tres-petit);
+    padding: var(--espace-moyen);
+    border: 3px solid var(--couleur-bordure-lien);
+    border-radius: var(--rayon);
+    background-color: var(--couleur-carte);
 }
 
 .carte-sujet a{
-    color:#7B1B38;
+    color:var(--couleur-bordure-lien);
     text-decoration: none;
 }
 
 .carte-sujet a:focus-visible{
-    outline: 3px solid #7B1B38;
-    border-radius: 5px;
+    outline: 3px solid var(--couleur-bordure-lien);
+    border-radius: var(--rayon);
     outline-offset: 2px;
 }
 
 .carte-sujet:hover{
-    border: 3px solid #7B1B38;
-    background-color: #7B1B38;
-    color:#82b74b;
+    border: 3px solid var(--couleur-bordure-lien);
+    background-color: var(--couleur-bordure-lien);
+    color:var(--couleur-fond);
 }
 
 .carte-sujet:hover strong,
 .carte-sujet:hover a{
-    color: #82b74b;
+    color: var(--couleur-fond);
     text-decoration: none;
 }
 
 .carte-sujet strong{
-    color: #405d27d3;
+    color: var(--couleur-form);
 }
 
 
@@ -140,50 +157,50 @@ input, textarea, select, button{
     align-content: flex-start;
 
     margin-top: 5px;
-    padding: 0px 16px;
-    border: 3px solid #7B1B38;
-    border-radius: 5px;
-    background-color: #ffd1a5;
+    padding: var(--pas-espace) var(--espace-moyen);
+    border: 3px solid var(--couleur-bordure-lien);
+    border-radius: var(--rayon);
+    background-color: var(--couleur-carte);
 }
 
 textarea{
-    padding: 16px;
+    padding: var(--espace-moyen);
     width:100%;
-    background-color: #ffeeaf;
-    border: 3px solid #405d27;
-    border-radius: 5px;
+    background-color: var(--couleur-bulle);
+    border: 3px solid var(--couleur-form);
+    border-radius: var(--rayon);
     resize:none;
 }
 
 textarea:focus-visible{ 
-    outline: 3px solid #7B1B38;
-    border-radius: 5px;
+    outline: 3px solid var(--couleur-bordure-lien);
+    border-radius: var(--rayon);
     outline-offset: 2px;
 }
 
 .carte-message p input{
     width: 100%;
-    background-color: #ffeeaf;
-    padding: 5px;
-    border: 3px solid #405d27;
-    border-radius: 5px;
+    background-color: var(--couleur-bulle);
+    padding: var(--espace-tres-petit);
+    border: 3px solid var(--couleur-form);
+    border-radius: var(--rayon);
 }
 
 .carte-message p input:focus-visible{ 
-    outline: 3px solid #7B1B38;
-    border-radius: 5px;
+    outline: 3px solid var(--couleur-bordure-lien);
+    border-radius: var(--rayon);
     outline-offset: 2px;
 }
 
 .option-publication select{
-    background-color: #ffeeaf;
-    padding: 5px;
-    border: 3px solid #405d27;
-    border-radius: 5px;
+    background-color: var(--couleur-bulle);
+    padding: var(--espace-tres-petit);
+    border: 3px solid var(--couleur-form);
+    border-radius: var(--rayon);
 }
 
 .option-publication select:focus-visible{ 
-    outline: 3px solid #7B1B38;
+    outline: 3px solid var(--couleur-bordure-lien);
     outline-offset: 2px;
 }
 
@@ -196,12 +213,12 @@ textarea:focus-visible{
     flex-direction: row;       /* Met la case et le texte côte à côte */
     align-items: center;       /* Aligne parfaitement la case et le texte verticalement */
     justify-content: flex-start; /* Aligne le tout à gauche */
-    gap: 10px;                 /* Crée un espace propre de 10px entre la case et le texte */
+    gap: var(--espace-petit);                 /* Crée un espace propre de 10px entre la case et le texte */
 }
 
 .carte-message p input[type="checkbox"] {
     width: auto;               /* Reprend sa taille de case normale */
-    margin: 0;                 /* Supprime les marges indésirables */
+    margin: var(--pas-espace);                 /* Supprime les marges indésirables */
     cursor: pointer;           /* Ajoute le curseur "main" au survol */
 }
 
@@ -212,68 +229,66 @@ form{
     align-items: stretch;
     align-content: flex-start;
 
-    margin-top: 5px;
-    padding: 15px;
-    border: 0px solid #7B1B38;
-    border-radius: 8px;
-    background-color: #405d27d3; 
+    margin-top: var(--espace-tres-petit);
+    padding: var(--espace-moyen);
+    border: 0px solid var(--couleur-bordure-lien);
+    border-radius: var(--rayon);
+    background-color: var(--couleur-form); 
 }
 
 .bouton{
     border: none;
     width: 100%;
-    margin-top: 10px;
-    background-color: #ffeeaf;
-    padding: 10px;
-    border-radius: 5px;
+    margin-top: var(--espace-petit);
+    background-color: var(--couleur-bulle);
+    padding: var(--espace-petit);
+    border-radius: var(--rayon);
 }
 
 .bouton:focus-visible{ 
-    color: #82b74b;
-    background-color: #7B1B38;
+    color: var(--couleur-fond);
+    background-color: var(--couleur-bordure-lien);
     outline: 0px;
     outline-offset: 2px;
 }
 
 .bouton:hover{
-    color: #82b74b;
-    background-color: #7B1B38;
+    color: var(--couleur-fond);
+    background-color: var(--couleur-bordure-lien);
 }
 
-
-
 .link{
-    color: #82b74b;
+    color: var(--couleur-fond);
     text-decoration: none;
 }
 
 .link:hover{
-    color: #7B1B38;
+    color: var(--couleur-bordure-lien);
     text-decoration: underline;
 }
 
 .link:focus-visible{
-    outline: 3px solid #7B1B38;
-    border-radius: 5px;
+    outline: 3px solid var(--couleur-bordure-lien);
+    border-radius: var(--rayon);
     outline-offset: 2px;
 }
 
 section form input[type="radio"]{
-    accent-color: #405d27;
+    accent-color: var(--couleur-form);
 }
 
 section form input[type="radio"]:focus-visible{ 
-    outline: 3px solid #7B1B38;
+    outline: 3px solid var(--couleur-bordure-lien);
     outline-offset: 2px;
 }
 
 
 /* === 6. Pied de page ================================= */
 .pied {
-    color: #82b74b;
-    margin-top: 100px;
-    padding-top: 10px;
-    padding-bottom: 100px;
-    background-color: #7B1B38;
+    color: var(--couleur-fond);
+    margin-top: var(--espace-tres-grand);
+    padding-top: var(--espace-petit);
+    padding-bottom: var(--espace-tres-grand);
+    background-color: var(--couleur-bordure-lien);
     text-align: center;
 }
