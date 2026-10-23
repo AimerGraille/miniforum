@@ -32,7 +32,7 @@ body
 {
     margin: var(--pas-espace);
     font-family: 'Luckiest Guy', cursive, sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.6;
     color: var(--couleur-texte);
     background-color: var(--couleur-fond);
@@ -40,7 +40,7 @@ body
 
 main{
     width: 90%;
-    max-width: 1200px;
+    max-width: 75rem;
     margin: var(--pas-espace) auto;
     padding: var(--pas-espace);
 }
