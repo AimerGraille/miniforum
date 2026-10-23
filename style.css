@@ -106,14 +106,25 @@ nav ul {
 .liste-sujets { 
     display: flex;
     flex-wrap: wrap;
-    gap: var(--espace-moyen);
     gap: var(--espace-tres-petit);
     list-style: none;
     margin: var(--pas-espace);
     padding: var(--pas-espace);
 }
 
+.zone-sujet {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espace-grand);
+}
 
+.fil-messages{
+    flex: 1 1 24rem;
+}
+
+.infos-sujet{
+    flex: 0 0 20rem;
+}
 
 
 /* === 4. Cartes de sujet ============================== */
