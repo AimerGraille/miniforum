@@ -55,13 +55,20 @@ h2 {
 } */
 /* === 2. En-tete et navigation ======================== */
 .entete{
-    align-items: center;
+    align-items: flex-start; /* center*/
     background-color: var(--couleur-bordure-lien);
     border: 0px solid var(--couleur-form);
     color: var(--couleur-fond);
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    gap: var(--espace-petit); /* a modifier*/
     padding: var(--espace-tres-petit) var(--espace-grand);
+    padding-bottom: var(--espace-moyen);
+}
+
+@media (min-width: 48rem) {
+.entete { flex-direction: row; align-items: center;}
 }
 
 nav ul { 
@@ -117,7 +124,7 @@ nav ul {
     border: 3px solid var(--couleur-bordure-lien);
     border-radius: var(--rayon);
     background-color: var(--couleur-carte);
-    flex: 1 1 18rem; /* ligne etend les sujets*/
+    flex: 1 1 18rem;
 }
 
 .carte-sujet a{
