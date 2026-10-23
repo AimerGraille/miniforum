@@ -47,6 +47,7 @@ main{
 
 h2 {
     margin-top: var(--espace-tres-grand);
+    flex: 1 1 100%;
 }
 /* label { 
     display: block; 
@@ -97,12 +98,15 @@ nav ul {
 
 .liste-sujets { 
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    gap: var(--espace-moyen);
     gap: var(--espace-tres-petit);
     list-style: none;
     margin: var(--pas-espace);
     padding: var(--pas-espace);
 }
+
+
 
 
 /* === 4. Cartes de sujet ============================== */
@@ -113,6 +117,7 @@ nav ul {
     border: 3px solid var(--couleur-bordure-lien);
     border-radius: var(--rayon);
     background-color: var(--couleur-carte);
+    flex: 1 1 18rem; /* ligne etend les sujets*/
 }
 
 .carte-sujet a{
