@@ -30,7 +30,7 @@ palette de couleur:
 
 body
 {
-    background-image: url('téléchargement (1).jpg');
+    background-image: url('');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -72,7 +72,7 @@ h2 {
     padding: var(--espace-tres-petit) var(--espace-grand);
     padding-bottom: var(--espace-moyen);
 
-    background-image: url('téléchargement.jpg');
+    background-image: url('');
     background-repeat: repeat;
     background-position: center center;
     background-size: cover;
@@ -142,7 +142,7 @@ nav ul {
 /* === 4. Cartes de sujet ============================== */
 
 .carte-sujet {
-    background-image: url('téléchargement\ \(3\).jpg');
+    background-image: url('');
     background-repeat: repeat;
     background-position: center center;
     background-size: cover;
@@ -191,7 +191,7 @@ input, textarea, select, button{
 }
 
 .option-publication, .carte-message {
-    background-image: url('téléchargement\ \(2\).jpg');
+    background-image: url('');
     background-repeat: repeat;
     background-position: center center;
     background-size: cover;
@@ -339,7 +339,7 @@ section form input[type="radio"]:focus-visible{
     background-color: var(--couleur-bordure-lien);
     text-align: center;
 
-    background-image: url('téléchargement.jpg');
+    background-image: url('');
     background-repeat: repeat;
     background-position: center center;
     background-size: cover;
