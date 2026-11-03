@@ -27,8 +27,27 @@ function chercheDansTitres(titres, texte){ return titres.filter(titre => titre.t
 // function chercheDansTitres(titres, texte){ return titres.toLowerCase().includes(texte.toLowerCase())}
 function titreExiste(titres, saisie)
 {
-
     const resultats = chercheDansTitres(titres, saisie.trim());
     //si la fonction retourne un résultat, il sera forcément supérieur à 0
     return resultats.length > 0;
+}
+
+function validerTitre(titres, saisie){
+
+    if(saisie.trim() === "")
+    {
+        return "Le titre est obligatoire.";
+    } else if (saisie.trim().length < LONGUEUR_MIN)
+    {
+        return "Le titre doit faire au moins 5 caractères.";
+    } else if (saisie.trim().length > LONGUEUR_MAX)
+    {
+        return "Le titre ne doit pas dépasser 80 caractères.";
+    } else if (chercheDansTitres(titres, saisie.trim())=== true)
+    {
+        return "Ce sujet existe déjà.";
+    }else
+    {
+        return"";
+    }
 }
