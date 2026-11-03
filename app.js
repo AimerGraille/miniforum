@@ -51,3 +51,21 @@ function validerTitre(titres, saisie){
         return"";
     }
 }
+
+
+// console . log (" --- etape 4 ---");
+// console . table ( titresTries ( titres ) );
+// console . log ( titres [0]);
+// console . log ( chercheDansTitres ( titres , "sql ") );
+// console . log ( chercheDansTitres ( titres , " licorne ") );
+// console . log ( titreExiste ( titres , " GIT REFUSE MON PUSH ") );
+// console . log ( titreExiste ( titres , "Un titre invent é") );
+
+// console . log (" --- etape 5 ---");
+// console . log ( validerTitre ( titres , "") );
+// console . log ( validerTitre ( titres , " ") );
+// console . log ( validerTitre ( titres , "Git") );
+// console . log ( validerTitre ( titres , "a". repeat (81) ) );
+// console . log ( validerTitre ( titres , "UN DE TES TITRES ") );
+// const reponse = validerTitre ( titres , " Comment lire une erreur ?");
+// console . log ("[" + reponse + "]");
