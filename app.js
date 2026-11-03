@@ -25,13 +25,10 @@ function titresTries(titres){ return titres.slice().sort()} //copie puis trie
 function chercheDansTitres(titres, texte){ return titres.filter(titre => titre.toLowerCase().includes(texte.toLowerCase()))}
 
 // function chercheDansTitres(titres, texte){ return titres.toLowerCase().includes(texte.toLowerCase())}
+function titreExiste(titres, saisie)
+{
 
-function titreExiste(titres, saisie){ return }
-
-console . log (" --- etape 4 ---");
-console . table ( titresTries ( titres ) );
-console . log ( titres [0]);
-console . log ( chercheDansTitres ( titres , "sql ") );
-console . log ( chercheDansTitres ( titres , " licorne ") );
-console . log ( titreExiste ( titres , " GIT REFUSE MON PUSH ") );
-console . log ( titreExiste ( titres , "Un titre invent é") );
+    const resultats = chercheDansTitres(titres, saisie.trim());
+    //si la fonction retourne un résultat, il sera forcément supérieur à 0
+    return resultats.length > 0;
+}
