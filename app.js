@@ -10,12 +10,12 @@ const LONGUEUR_MAX = 80;
 
 //Les titres des sujets, du plus ancien au plus récent.
 const titres =[
-    "MiniForum",
-    "Sujet récents",
     "Sujet 1",
     "Sujet 2", //question à faire
     "Sujet 3",
-    "Nouveau Sujet",
+    "Sujet 4",
+    "Sujet 5",
+    "Sujet 6",
 
     //... au moins 6 titres au total
 ]
@@ -52,6 +52,26 @@ function validerTitre(titres, saisie){
     }
 }
 
+function carteSujet(titre)
+{
+    const article = document.createElement("article");
+    article.classList.add("carte-sujet");
+    const h3 = document.createElement("h3");
+    h3.textContent = titre;
+    article.append(h3);
+    return article;
+}
+
+function afficherSujets(liste)
+{
+    const section = document.querySelector("#sujets");
+    document.querySelectorAll(".carte-sujet").forEach((article)=> article.remove());
+    for (const titre of liste)
+    {
+        section.append(carteSujet(titre));
+    }
+}
+
 
 // console . log (" --- etape 4 ---");
 // console . table ( titresTries ( titres ) );
@@ -69,3 +89,8 @@ function validerTitre(titres, saisie){
 // console . log ( validerTitre ( titres , "UN DE TES TITRES ") );
 // const reponse = validerTitre ( titres , " Comment lire une erreur ?");
 // console . log ("[" + reponse + "]");
+
+if (document.querySelector("#sujets") !== null)
+{
+    afficherSujets(titres);
+}
