@@ -24,7 +24,7 @@
 
                 <h2>Sujets récents</h2>
 
-                <article id="article1" class="carte-sujet">
+                <!-- <article id="article1" class="carte-sujet">
                     <h3><a href="sujet1.html">Sujet 1</a></h3>
                     <strong>auteurs</strong> articles 
                 </article>
@@ -37,28 +37,31 @@
                 <article id="article3" class="carte-sujet">
                     <h3><a href="sujet3.html">Sujet 3</a></h3>
                     <strong>auteurs</strong> articles
-                </article>
+                </article> -->
 
             </section>
 
             <section>
                 <h2>Nouveau Sujet</h2>
-                <form action="/topics" method="post">
+                <form id="form-nouveau-sujet" action="/topics" method="post" novalidate>
                     <fieldset class="carte-message">
                         <h4>Votre message</h4>
                         <p>
                             <label for="pseudo">Pseudo</label>
                             <input type="text" id="pseudo" name="pseudo" pattern="[A-Za-z0-9]{3,15}" placeholder="AimerGraille" title ="3 à 15 caractères : lettres et chiffres uniquement " required>
+                            <p class =" message - erreur " id ="erreur - pseudo " > </p>
                         </p>
 
                         <p>
                             <label for="titre">Titre du sujet</label>
                             <input type="text" id="titre" name="titre" maxlength="80" required>
+                            <p class =" message - erreur " id ="erreur - pseudo " > </p>
                         </p>
 
                         <p>
                             <label for="message">Contenu</label>
                             <textarea id="message" name="message" rows="6" maxlength="500" required></textarea>
+                            <p class =" message - erreur " id ="erreur - pseudo " > </p>
                         </p>
                     </fieldset>
 
