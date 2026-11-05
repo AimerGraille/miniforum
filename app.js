@@ -58,7 +58,7 @@ function carteSujet(titre)
     article.classList.add("carte-sujet");
     const h3 = document.createElement("h3");
     h3.textContent = titre;
-    article.append(h3);
+    article.append(h3); // peu etre a enlever
     return article;
 }
 
@@ -72,6 +72,11 @@ function afficherSujets(liste)
     }
 }
 
+function afficherErreur(idMessage, texte)
+{
+    const messageErreur = document.querySelector("#erreur-message");
+    messageErreur.append()//continuer de remplir d'ici la prochaine fois...
+}
 
 // console . log (" --- etape 4 ---");
 // console . table ( titresTries ( titres ) );
@@ -92,5 +97,21 @@ function afficherSujets(liste)
 
 if (document.querySelector("#sujets") !== null)
 {
+    const formulaire = document.querySelector("#form-nouveau-sujet");
+
+    formulaire.addEventListener("submit", (event)=>{
+        event.preventDefault();
+
+        const champTitre = document.querySelector("#titre");
+        const valeurTitre = champTitre.value;
+
+        const messageErreur = validerTitre(titres, valeurTitre);
+
+        if(messageErreur !== ""){
+            afficherErreur(idMessage, messageErreur)
+        }
+    })
+
     afficherSujets(titres);
+
 }
