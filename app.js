@@ -52,6 +52,43 @@ function validerTitre(titres, saisie){
     }
 }
 
+function validerPseudo(saisie){
+   if(saisie.trim() === "")
+    {
+        return "Le pseudo est obligatoire.";
+    }
+    else if(saisie.trim().includes(" "))
+    {
+        return "Le pseudo ne peut pas contenir d'espaces."
+    }
+    else
+    {
+        return"";
+    }
+};
+
+function validerTitre(saisie){
+  
+    const MESSAGE_MAX = 500;
+
+    if(saisie.trim() === "")
+    {
+        return "Le message est obligatoire.";
+    }
+    else if(saisie.trim().includes(" "))
+    {
+        return "Le message ne peut pas contenir d'espaces."
+    }
+    else if(saisie.trim().length > MESSAGE_MAX)
+    {
+        return "Le message est trop long."
+    }
+    else
+    {
+        return"";
+    }
+};
+
 function carteSujet(titre)
 {
     const article = document.createElement("article");
@@ -105,16 +142,18 @@ if (document.querySelector("#sujets") !== null)
         event.preventDefault();
 
         const champTitre = document.querySelector("#titre");
-        const valeurTitre = champTitre.value;
+        const champPseudo = document.querySelector("#pseudo");
+        const champMessage = document.querySelector("#message");
 
-        const messageErreur = validerTitre(titres, valeurTitre);
-        if(messageErreur !== ""){
-            afficherErreur("message-erreur", messageErreur)
+        const titreErreur = validerTitre(titres, champTitre.value);
+        const pseudoErreur = validerPseudo(champPseudo.value);
+        const messageErreur = validerMessage(champMessage.value);
+    
+        if(messageErreur !== "" || pseudoErreur !== "" || titreErreur !== ""){
             return;
         }
 
-        afficherErreur("message-Erreur", "");
-        titres.push(valeurTitre.trim());
+        titres.push(champTitre.value.trim());
         afficherSujets(titres);
 
         formulaire.reset();
