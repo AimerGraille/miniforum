@@ -74,8 +74,10 @@ function afficherSujets(liste)
 
 function afficherErreur(idMessage, texte)
 {
-    const messageErreur = document.querySelector("#erreur-message");
-    messageErreur.append()//continuer de remplir d'ici la prochaine fois...
+    const zoneMessage = document.querySelector("#" + idMessage);
+    if(zoneMessage){
+        zoneMessage.textContent = texte;
+    }
 }
 
 // console . log (" --- etape 4 ---");
@@ -106,10 +108,17 @@ if (document.querySelector("#sujets") !== null)
         const valeurTitre = champTitre.value;
 
         const messageErreur = validerTitre(titres, valeurTitre);
-
         if(messageErreur !== ""){
-            afficherErreur(idMessage, messageErreur)
+            afficherErreur("message-erreur", messageErreur)
+            return;
         }
+
+        afficherErreur("message-Erreur", "");
+        titres.push(valeurTitre.trim());
+        afficherSujets(titres);
+
+        formulaire.reset();
+        champTitre.focus()
     })
 
     afficherSujets(titres);
