@@ -43,7 +43,7 @@ function validerTitre(titres, saisie){
     } else if (saisie.trim().length > LONGUEUR_MAX)
     {
         return "Le titre ne doit pas dépasser 80 caractères.";
-    } else if (chercheDansTitres(titres, saisie.trim())=== true)
+    } else if (titreExiste(titres, saisie))
     {
         return "Ce sujet existe déjà.";
     }else
@@ -67,17 +67,13 @@ function validerPseudo(saisie){
     }
 };
 
-function validerTitre(saisie){
+function validerMessage(saisie){
   
     const MESSAGE_MAX = 500;
 
     if(saisie.trim() === "")
     {
         return "Le message est obligatoire.";
-    }
-    else if(saisie.trim().includes(" "))
-    {
-        return "Le message ne peut pas contenir d'espaces."
     }
     else if(saisie.trim().length > MESSAGE_MAX)
     {
@@ -149,6 +145,10 @@ if (document.querySelector("#sujets") !== null)
         const pseudoErreur = validerPseudo(champPseudo.value);
         const messageErreur = validerMessage(champMessage.value);
     
+        afficherErreur("erreur-titre", titreErreur);
+        afficherErreur("erreur-pseudo", pseudoErreur);
+        afficherErreur("erreur-message", messageErreur);
+        
         if(messageErreur !== "" || pseudoErreur !== "" || titreErreur !== ""){
             return;
         }

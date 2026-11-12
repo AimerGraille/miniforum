@@ -49,19 +49,19 @@
                         <p>
                             <label for="pseudo">Pseudo</label>
                             <input type="text" id="pseudo" name="pseudo" pattern="[A-Za-z0-9]{3,15}" placeholder="AimerGraille" title ="3 à 15 caractères : lettres et chiffres uniquement " required>
-                            <p class ="message-erreur" id ="erreur-pseudo" > </p>
+                            <span class ="message-erreur" id ="erreur-pseudo" > </span>
                         </p>
 
                         <p>
                             <label for="titre">Titre du sujet</label>
                             <input type="text" id="titre" name="titre" maxlength="80" required>
-                            <p class ="message-erreur" id ="erreur-pseudo" > </p>
+                            <span class ="message-erreur" id ="erreur-titre" > </span>
                         </p>
 
                         <p>
                             <label for="message">Contenu</label>
                             <textarea id="message" name="message" rows="6" maxlength="500" required></textarea>
-                            <p class ="message-erreur" id ="erreur-pseudo" > </p>
+                            <span class ="message-erreur" id ="erreur-message" > </span>
                         </p>
                     </fieldset>
 
